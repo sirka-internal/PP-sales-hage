@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Present Perfect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Luckiest+Guy&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Хедер -->
+  <header class="header container">
+    <div class="header-wrap">
+      <div class="header-item">
+        <img src="assets/svg/logo-icon.svg" alt="Present Perfect" class="logo-icon">
+        <p class="header-title">Proudly Shipped All Over US</p>
+      </div>
+    </div>
+   
+  </header>
+
+<!--  Hero -->
+  <section class="container hero">
+    <div class="hero-btn-card-wrap">
+      <picture class="hero-logo-wrap">
+        <source
+        srcset="assets/svg/logo-desktop.svg"
+        media="(min-width: 1440px)"
+         />
+        <source 
+            srcset="assets/svg/logo-mobile.svg"
+            media="(max-width: 1439px)" 
+        />
+            <img 
+            class="hero-logo"
+            src="assets/svg/logo-mobile.svg" 
+            alt="logo Present Perfect"
+            />
+    </picture>
+      <button class="hero-cart-button">Add to your cart</button> 
+    </div>
+    <div class="hero-can-box-img-wrap">
+      <picture class="hero-logo-wrap">
+        <source
+        srcset="assets/image/can-box1-desktop.png"
+        media="(min-width: 1440px)"
+         />
+        <source 
+            srcset="assets/image/can-box1-mobile.png"
+            media="(max-width: 1439px)" 
+        />
+            <img 
+            class="hero-can-box-img"
+            src="assets/image/can-box1-mobile.png" 
+            alt="can-box"
+            />
+    </picture>
+    </div>
+    <div class="hero-content-wrap">
+      <div class="hero-content">
+        <div class="hero-reviews-wrap">
+            <div class="hero-reviews-stars-wrap">
+                <p class="hero-reviews-stars-title">45,852 Verified 5-star reviews</p>
+            </div>
+            <div class="hero-best-seller">
+<Img src="assets/svg/best-seller.svg" class="hero-best-seller-icon"></Img> <p class="hero-best-seller-title">Best Seller</p>
+            </div>
+    </div>
+
+<div class="hero-meditation-wrap">
+  <h1 class="hero-meditation-title">Meditation in a pill.
+   <span class="hero-meditation-title-red">Feel the joy of being present.</span> </h1>
+  <p class="hero-meditation-description">
+    Take care of yourself to be at your best for your loved ones. Achieve a balanced mind and inner peace effortlessly, and feel the positive ripple effect in your everyday life.
+  </p>
+  <ul class="hero-benefits-list">
+    <li> <img src="assets/svg/check.svg" alt="check"> <p>Protects the neurons</p></li>
+    <li> <img src="assets/svg/check.svg" alt="check"> <p>Improves concentration and focus</p></li>
+    <li> <img src="assets/svg/check.svg" alt="check"> <p>Restores a sense of calm</p></li>
+    <li> <img src="assets/svg/check.svg" alt="check"> <p>Creates space for what matters</p></li>
+  </ul>
+  <div class="hero-button-wrap">
+    <button class="hero-button">Try Present Perfect</button>
+    <ul class="hero-shpping-wrap">
+      <li><img src="assets/svg/check_24px.svg" alt=""> <p>Free shipping on orders over 40$</p></li>
+      <li><img src="assets/svg/check_24px.svg" alt=""> <p>Free shipping on orders over 40$</p></li>
+    </ul>
+  </div>
+  
+</div>
+       
+      </div>
+      <div class="hero-brain-image">
+        <img src="assets/image/hero-barin-desktop.png" alt="Present Perfect Product">
+      </div>
+    </div>
+ 
+  </section>
+  <!-- Brands -->
+<section class="container brands">
+        <div class="brands-logos">
+          <picture>
+            <source
+            srcset="assets/svg/populare_science-desktop.svg"
+            media="(min-width: 1440px)"
+             />
+            <source 
+                srcset="assets/svg/populare_science-mobile.svg"
+                media="(max-width: 1439px)" 
+            />
+                <img 
+                src="assets/svg/populare_science-mobile.svg" 
+                alt="Popular Science"
+                />
+        </picture>
+        <picture>
+          <source
+          srcset="assets/svg/newYorkTimes-desktop.svg"
+          media="(min-width: 1440px)"
+           />
+          <source 
+              srcset="assets/svg/newYorkTimes-mobile.svg"
+              media="(max-width: 1439px)" 
+          />
+              <img 
+              src="assets/svg/newYorkTimes-mobile.svg" 
+              alt="The New York Times"
+              />
+      </picture>
+        <img src="assets/svg/forbes_logo-desktop.svg" alt="Forbes">
+        <img src="assets/svg/vice_logo-desktop.svg" alt="Vice">
+        <img src="assets/svg/science-desktop.svg" alt="Science">
+      </div>
+  </section>
+  <!--Real Results -->
+<section class="container real-results">
+<div class="real-results-wrap">
+  <h2 class="real-results-title">Real Results from Real People</h2>
+  <div class="real-results-cards-wrapper">
+    <div class="real-results-cards" id="real-results-cards">
+ 
+    </div>
+  </div>
+ 
+  <div class="real-results-btn-wrap">
+<button class="real-results-btn" id="prevBtn">
+  <svg class="real-results-btn-wrap-img" >
+    <use href="assets/sprite.svg#arrow-back"></use>
+</svg>
+
+</button>
+<button class="real-results-btn" id="nextBtn"> 
+  <svg class="real-results-btn-wrap-img" >
+    <use href="assets/sprite.svg#arrow-forward"></use>
+</svg>
+</button>
+  </div>
+</div>
+  </section >
+  <script src="js/reviewers.js" defer></script>
+  <!-- Power secret  -->
+  <section class="container power-secret">
+<div class="power-secret-wrap">
+  <div class="power-secret-title-wrap">
+    <h2 class="power-secret-title">The Power of Nature's Secret</h1>
+    <p class="power-secret-description">
+      After 30 days of taking Present Perfect, our users reported:
+    </p>
+  </div>
+
+<div class="power-secret-cards-wrap">
+  <ul class="power-secret-cards">
+    <li class="power-secret-card">
+      <img src="assets/svg/lightning-Icon.svg" alt="icon">
+      <p class="power-secret-card-title">Relaxed but Focused</p>
+      <p class="power-secret-card-description">Muscimol helps calm overactive neurons, allowing your mind to relax while staying sharp and focused. Feel at ease while maintaining clarity, perfect for tackling daily tasks without stress.</p>
+    </li>
+
+    <li class="power-secret-card">
+      <img src="assets/svg/racing-Icon.svg" alt="icon">
+      <p class="power-secret-card-title">Ease Your Racing Mind</p>
+      <p class="power-secret-card-description">Our formula works with your nervous system to reduce mental noise and quiet anxious thoughts. Experience a calm mind that lets you think clearly and act with intention.</p>
+    </li>
+
+    <li class="power-secret-card">
+      <img src="assets/svg/restore-Icon.svg" alt="icon">
+      <p class="power-secret-card-title">Restores sleep patterns</p>
+      <p class="power-secret-card-description">Poor sleep can leave your mind foggy and your body drained, making even simple tasks feel overwhelming. Present Perfect works naturally with your brain’s GABA pathways to promote relaxation and regulate your sleep cycle.</p>
+    </li>
+
+    <li class="power-secret-card">
+      <img src="assets/svg/support-Icon.svg" alt="icon">
+      <p class="power-secret-card-title">Support Your Nervous System</p>
+      <p class="power-secret-card-description">Present Perfect activates the GABA(A) receptors, restoring balance and resilience to your nervous system. Stay grounded, even in challenging situations, with a naturally fortified sense of well-being.</p>
+    </li>
+  </ul>
+
+  <div class="power-secret-indicators">
+    <span class="power-secret-indicator active"></span>
+    <span class="power-secret-indicator"></span>
+    <span class="power-secret-indicator"></span>
+    <span class="power-secret-indicator"></span>
+  </div>
+</div>
+</div>
+<div class="power-secret-image">
+  <picture>
+    <source
+    srcset="assets/image/can-illustration-desktop.png"
+    media="(min-width: 1440px)"
+     />
+    <source 
+        srcset="assets/image/can-illustration-mobile.png"
+        media="(max-width: 1439px)" 
+    />
+        <img 
+        src="assets/image/can-illustration-mobile.png" 
+        alt="can"
+        />
+</picture>
+ 
+</div>
+  </section>
+ <!-- "Be Part of Our Wellness Tribe"  -->
+  <section class="container">
+    <div class=" wellness-tribe">
+      <h2 class="tribe-title">Be Part of Our Wellness Tribe</h2>
+      <p class="tribe-subtitle">
+        Trusted by over 100,000 Happy Moms
+      </p>
+      <div class="tribe-members-wrap">
+        <div class="tribe-members" id="tribe-members">
+          <div class="tribe-member">
+              <div class="tribe-member-image">
+                  <img src="assets/image/monica.png" alt="Monica" >
+              </div>
+            <div class="tribe-member-info">
+              <h3 class="tribe-member-name">Monica</h3>
+              <p class="tribe-member-description">Found peace and overcame anxiety</p>
+  
+            </div>
+          </div>
+          
+          <div class="tribe-member">
+              <div class="tribe-member-image">
+                  <img src="assets/image/kamala.png" alt="Kamala" >
+              </div>
+            <div class="tribe-member-info">
+              <h3 class="tribe-member-name">Kamala</h3>
+              <p class="tribe-member-description">Sleeps better, feels energized</p>
+            </div>
+          </div>
+          
+          <div class="tribe-member">
+              <div class="tribe-member-image">
+                  <img src="assets/image/hilary.png" alt="Hillary" >
+              </div>
+            <div class="tribe-member-info">
+              <h3 class="tribe-member-name">Hillary</h3>
+              <p class="tribe-member-description">Restored her energy and balance</p>
+  
+            </div>
+          </div>
+    
+          <div class="tribe-member">
+              <div class="tribe-member-image">
+                  <img src="assets/image/jenny.png" alt="Jenny" >
+              </div>
+             <div class="tribe-member-info">
+              <h3 class="tribe-member-name">Jenny</h3>
+              <p class="tribe-member-description">No more scattered thoughts, just focus</p>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+      <div class="tribe-member-btn-wrap">
+        <button class="tribe-member-btn" id="tribe-prevBtn">
+          <svg class="tribe-member-btn-img" >
+            <use href="assets/sprite.svg#arrow-back"></use>
+        </svg>
+        
+        </button>
+        <button class="tribe-member-btn" id="tribe-nextBtn"> 
+          <svg class="tribe-member-btn-img" >
+            <use href="assets/sprite.svg#arrow-forward"></use>
+        </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  <script src="js/wellness-tribe.js" defer></script>
+  <!-- Product -->
+   <section class="container product">
+    <div class=" product-container">
+        <div class="product-image">
+            <img
+              id="main-image"
+              src="assets/image/can_box.png"
+              alt="Pure Amanita Muscaria Extract"
+            />
+        <div class="product-thumbnails">
+          <img src="assets/image/can_box.png" alt="Thumbnail 1" class="thumbnail active"/>
+          <img src="assets/image/can_box_2.png" alt="Thumbnail 2" class="thumbnail"/>
+          <img src="assets/image/can_box_3.png" alt="Thumbnail 3" class="thumbnail"/>
+          <img src="assets/image/can_box_4.png" alt="Thumbnail 4" class="thumbnail"/>
+        </div>
+        <div class="product-scroll-mobile">
+          <img src="assets/image/can_box_1-mobile.png" alt="Thumbnail 1"/>
+          <img src="assets/image/can_box_2.png" alt="Thumbnail 2"/>
+          <img src="assets/image/can_box_3.png" alt="Thumbnail 3"/>
+          <img src="assets/image/can_box_4.png" alt="Thumbnail 4"/>
+        </div>
+        <div class="product-indicators">
+          <span class="indicator active"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+        </div>
+      </div>
+  
+          <div class="product-info">
+            <div class="hero-reviews-wrap">
+              <div class="hero-reviews-stars-wrap">
+                  <p class="hero-reviews-stars-title">45,852 Verified 5-star reviews</p>
+              </div>
+              <div class="hero-best-seller">
+  <Img src="assets/svg/best-seller.svg" class="hero-best-seller-icon"></Img> <p class="hero-best-seller-title">Best Seller</p>
+              </div>
+      </div>
+        <h2 class="product-title">Brain Enhancer <br> Amanita Muscaria</h2>
+        <p class="product-subtitle">
+          A stress reliever that genuinely works
+        </p>
+        <ul class="product-benefits">
+          <li><img src="assets/svg/check.svg" alt="check"> <p>Creates space for what truly matters</p></li>
+          <li><img src="assets/svg/check.svg" alt="check"> <p>Restores a sense of calm and balance</p></li>
+          <li><img src="assets/svg/check.svg" alt="check"> <p>Supports healthy sleep patterns</p></li>
+        </ul>
+        <div class="product-pricing">
+          <div class="pricing-option">
+            <div class="pricing-title-wrap">
+              <p class="pricing-title">Most Popular</p>
+              <p class="price-details">Subscribe & Save • 15% off + Free Shipping</p>
+            </div>
+            <p class="product-price">$49.5</p>
+          </div>
+          <div class="pricing-option">
+            <div class="pricing-title-wrap">
+            <p class="pricing-title">Best Results</p>
+            <p class="price-details">3-Month Supply • 15% off + Free Shipping</p>
+          </div>
+            <p class="product-price">$49.5</p>
+          </div>
+          <div class="pricing-option">
+            <div class="pricing-title-wrap">
+            <p class="pricing-title">Try Once</p>
+            <p class="price-details">1-Month Supply</p>
+          </div>
+            <p class="product-price">$49.5</p>
+          </div>
+          <div class="pricing-option">
+            <div class="pricing-title-wrap">
+            <p class="pricing-title">Forth One</p>
+            <p class="price-details">1-Month Supply</p>
+          </div>
+            <p class="product-price">$49.5</p>
+          </div>
+        </div>
+          <button class="product-btn-buy-now">Shop now ($49.5)</button>
+        <div class="product-buy-icon-wrap">
+          <div class="product-buy-icon">
+            <img src="assets/svg/scientific-Icon.svg" alt="icon">
+          <p class="product-buy-text">Scientific proven mechanism of action</p>
+          </div>
+          <div class="product-buy-icon">
+            <img src="assets/svg/patented-Icon.svg" alt="icon">
+          <p class="product-buy-text">Patented purification biotechnology</p>
+          </div>
+          <div class="product-buy-icon">
+            <img src="assets/svg/effective-Icon.svg" alt="icon">
+          <p class="product-buy-text">Effective novelty-product</p>
+          </div>
+        </div>
+       
+        <div class="product-buy-info">
+          <ul class="product-buy-info-list">
+              <li class="product-buy-list-item active" >What is it</li>
+              <li class="product-buy-list-item" >How to use</li>
+              <li class="product-buy-list-item" >Ingredients</li>
+          </ul>
+  
+          <div class="product-buy-description active" id="description-1">
+            Liquid collagen that visibly transforms your skin & hair, supports your gut health and supports your healthy weight goals in just 6 weeks.
+
+Just 1-2 tablespoons a day
+Supercharged with Vitamin C and Hyaluronic Acid
+Obsessively tested and backed by data
+Supports noticeably smoother and plumper skin, promotes stronger and fuller healthy hair, and supports joint health.
+          </div>
+          <div class="product-buy-description" id="description-2">This is the description for Point 2.</div>
+          <div class="product-buy-description" id="description-3">This is the description for Point 3.</div>
+      </div>
+      <div class="product-buy-results">
+        <h2 class="product-buy-results-title">Science-Backed Results You Can Trust</h2>
+        <p class="product-buy-results-subtitle">After 30 days of taking Present Perfect, our users reported:</p>
+            <div class="product-buy-results-percentage-list">
+              <div class="product-buy-results-percentage-wrap">
+                <p class="product-buy-results-percentage">96%</p> <p class="product-buy-results-percentage-text">felt a significant reduction in anxiety and stress</p>
+              </div>
+              <div class="product-buy-results-percentage-wrap">
+                <p class="product-buy-results-percentage">95%</p> <p class="product-buy-results-percentage-text">experienced better, more restful</p>
+              </div>
+              <div class="product-buy-results-percentage-wrap">
+                <p class="product-buy-results-percentage">94%</p> <p class="product-buy-results-percentage-text">noticed improved focus and mental clarity</p>
+              </div>
+            </div>
+        
+        
+        </div>
+
+      </div>
+ 
+    </div>
+  
+ 
+    <div class="product-guarantee">
+      <img src="assets/svg/full-refund-icon.svg" alt="" class="product-guarantee-icon">
+        <div class="product-guarantee-title-wrap">
+          <h3 class="guarantee-title">100-Day Money-Back Guarantee</h3>
+          <p class="guarantee-text">
+            If you don't see the results within 100 days, we'll gladly refund your
+            money — no questions asked.
+          </p>
+        </div>
+     
+    </div>
+    <div class="product-guarantee-string-info">
+      <div class="product-guarantee-string-info-wrap"> <img src="assets/svg/garantee.svg" alt="garantee">
+        <p>100% money refound guarantee</p></div>
+      
+    </div>
+  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const guaranteeString = document.querySelector('.product-guarantee-string-info');
+    const item = guaranteeString.firstElementChild;
+    let totalWidth = 0;
+    const containerWidth = guaranteeString.offsetWidth;
+  
+    while (totalWidth < containerWidth) {
+      const clone = item.cloneNode(true); 
+      guaranteeString.appendChild(clone); 
+      totalWidth += clone.offsetWidth + 32;
+    }
+  });
+  </script>
+  <!-- how-to-take -->
+<section class="container">
+    <div class="how-to-take-image-container">
+      <h2 class="how-to-take-title">How to Take</h2>
+      <div class="how-to-take-images-container">
+        <div class="how-to-take-images-wrap" id="how-to-take-images-wrap">
+          <div class="how-to-take-image-wrap" >
+            <picture >
+              <source
+              srcset="assets/image/how-to-take1-desktop.png"
+              media="(min-width: 1440px)"
+               />
+              <source 
+                  srcset="assets/image/how-to-take1-mobile.png"
+                  media="(max-width: 1439px)" 
+              />
+                  <img 
+                  class="how-to-take-image"
+                  src="assets/image/how-to-take1-mobile.png" 
+                  alt="how to take image"
+                  />
+          </picture>
+            <span class="how-to-take-image-step">Step 1</span>
+            <span class="how-to-take-image-description">Take 2 capsules with water</span>
+           </div>
+           <div class="how-to-take-image-wrap" id="how-to-take-image-wrap">
+            <picture >
+              <source
+              srcset="assets/image/how-to-take2-desktop.png"
+              media="(min-width: 1440px)"
+               />
+              <source 
+                  srcset="assets/image/how-to-take2-desktop.png"
+                  media="(max-width: 1439px)" 
+              />
+                  <img 
+                  class="how-to-take-image"
+                  src="assets/image/how-to-take2-desktop.png" 
+                  alt="how to take image"
+                  />
+          </picture>
+            <span class="how-to-take-image-step">Step 2</span>
+            <span class="how-to-take-image-description">Feel the calming effect after 15 min</span>
+           </div>
+           <div class="how-to-take-image-wrap" id="how-to-take-image-wrap">
+            <picture>
+              <source
+              srcset="assets/image/how-to-take3-desktop.png"
+              media="(min-width: 1440px)"
+               />
+              <source 
+                  srcset="assets/image/how-to-take3-desktop.png"
+                  media="(max-width: 1439px)" 
+              />
+                  <img 
+                  class="how-to-take-image"
+                  src="assets/image/how-to-take3-desktop.png" 
+                  alt="how to take image"
+                  />
+          </picture>
+            <span class="how-to-take-image-step">Step 3</span>
+            <span class="how-to-take-image-description">Feel the joy of being present for 
+              rest of the day</span>
+           </div>
+        </div>
+      </div>
+     
+       <div class="how-to-take-btn-wrap" >
+        <button class="how-to-take-btn" id="how-to-take-prevBtn">
+          <svg class="how-to-take-btn-img" >
+            <use href="assets/sprite.svg#arrow-back"></use>
+        </svg>
+        
+        </button>
+        <button class="how-to-take-btn" id="how-to-take-nextBtn"> 
+          <svg class="how-to-take-btn-img" >
+            <use href="assets/sprite.svg#arrow-forward"></use>
+        </svg>
+        </button>
+      </div>
+    </div>
+    <div class="how-to-take-experience-wrap">
+        <h2 class="how-to-take-experience-title">Experience the healing power</h2>
+        <button class="how-to-take-experience-btn">Make a purchase</button>
+    
+        <div class="how-to-take-experience-string-info">
+          <div class="how-to-take-experience-string-info-wrap"> 
+            <img src="assets/svg/garantee-black.svg" alt="garantee">
+            <p>30 days money back guarantee if you don't like the product</p></div>
+          
+        </div>
+      </div>
+</section>
+<script src="js/how-to-take.js"></script>
+ <!-- Science -->
+<section class="container science-container">
+  <div class="science-title-wrap">
+    <h2 class="science-title">
+      Grounded in Nature, Proven by Science
+    </h2>
+    <p class="science-description">
+      Handpicked in the forest, purified in the lab — experience the best of both worlds. Thanks to our unique extraction technology, we keep the benefits of Amanita Muscaria while removing unwanted neurotoxins. Our process guarantees the highest purification, so you can enjoy the benefits of Muscimol without withdrawals or losing clarity. Present Perfect is tested by third-party labs to ensure potency and purity.
+    </p>
+  </div>
+ <div class="science-amanita-main-container">
+  <div class="science-amanita-container">
+    <div class="science-amanita-wrap" id="science-amanita-wrap">
+      <div class="science-amanita-info">
+        <picture>
+          <source
+          srcset="assets/image/amanita1-desktop.png"
+          media="(min-width: 1440px)"
+           />
+          <source 
+              srcset="assets/image/amanita1-mobile.png"
+              media="(max-width: 1439px)" 
+          />
+              <img 
+              class="science-amanita-info-image"
+              src="assets/image/amanita1-mobile.png" 
+              alt="mushroom"
+              />
+      </picture>
+        <!-- <img src="assets/image/amanita1-mobile.png" alt="mushroom"> -->
+        <h3 class="science-amanita-title">Amanita Muscaria: Nature's Most Unique Ingredient</h3>
+        <p class="science-amanita-description">Our main ingredient, Amanita Muscaria, is carefully handpicked from pristine forest environments. This extraordinary mushroom thrives in symbiosis with trees, making it one of nature’s rarest gifts. By harnessing its unique properties, we ensure a natural, high-quality supplement that’s both potent and safe. Rooted in nature and backed by science, Amanita Muscaria is the foundation of our formula.</p>
+      </div>
+      <div class="science-amanita-info">
+        <picture>
+          <source
+          srcset="assets/image/amanita2-desktop.png"
+          media="(min-width: 1440px)"
+           />
+          <source 
+              srcset="assets/image/amanita2-mobile.png"
+              media="(max-width: 1439px)" 
+          />
+              <img 
+              class="science-amanita-info-image"
+              src="assets/image/amanita2-mobile.png" 
+              alt="mushroom"
+              />
+      </picture>
+        <!-- <img src="assets/image/amanita2-mobile.png" alt="mushroom"> -->
+        <h3 class="science-amanita-title">Amanita Muscaria: Nature's Most Unique Ingredient</h3>
+        <ul class="science-amanita-list">
+         <li><img src="assets/svg/check.svg" alt="check"> <p>Developed by scientists</p></li>
+         <li><img src="assets/svg/check.svg" alt="check"> <p>Scientifically proven effectiveness</p></li>
+         <li><img src="assets/svg/check.svg" alt="check"> <p>Unique patented technology</p></li>
+         <li><img src="assets/svg/check.svg" alt="check"> <p>Free from neurotoxins</p></li>
+         <li><img src="assets/svg/check.svg" alt="check"> <p>Created by nature</p></li>
+         <li><img src="assets/svg/check.svg" alt="check"> <p>Highest level of purification</p></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <div class="science-btn-wrap" >
+    <button class="science-btn" id="science-prevBtn">
+      <svg class="science-btn-img" >
+        <use href="assets/sprite.svg#arrow-back"></use>
+    </svg>
+    </button>
+    <div class="science-indicators">
+      <span class="science-indicator active"></span>
+      <span class="science-indicator"></span>
+    </div>
+    <button class="science-btn" id="science-nextBtn"> 
+      <svg class="science-btn-img" >
+        <use href="assets/sprite.svg#arrow-forward"></use>
+    </svg>
+    </button>
+  </div>
+ </div>
+
+</section>
+<script src="js/science.js"></script>
+</body>
+<script src="js/script.js" defer></script>
+</html>
+
+
+
+
