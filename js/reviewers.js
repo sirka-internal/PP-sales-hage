@@ -65,8 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
           const visibleCardsCount = Math.floor(containerWidth / cardWidth); // Розраховуємо кількість карток, які поміщаються в контейнер
           const maxIndex = window.innerWidth <= 1339 ? Math.max(0, totalCards - visibleCardsCount - 1) : Math.max(0, totalCards - visibleCardsCount); // Зменшуємо на 1 для запобігання порожнього простору
           const offset = currentIndex * cardWidth;
-  console.log("maxIndex", maxIndex)
-  console.log("offset", offset)
+  // console.log("maxIndex", maxIndex)
+  // console.log("offset", offset)
           // Прокрутка контейнера по X осі
           cardsContainer.style.transform = `translateX(-${offset}px)`;
   

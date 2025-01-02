@@ -393,12 +393,14 @@
           </ul>
   
           <div class="product-buy-description active" id="description-1">
-            Liquid collagen that visibly transforms your skin & hair, supports your gut health and supports your healthy weight goals in just 6 weeks.
-
-Just 1-2 tablespoons a day
-Supercharged with Vitamin C and Hyaluronic Acid
-Obsessively tested and backed by data
-Supports noticeably smoother and plumper skin, promotes stronger and fuller healthy hair, and supports joint health.
+            
+              <p class="product-buy-description-title">Liquid collagen that visibly transforms your skin & hair, supports your gut health and supports your healthy weight goals in just 6 weeks. </p>
+            <ul class="product-buy-description-list">
+              <li>Just 1-2 tablespoons a day</li>
+              <li>Supercharged with Vitamin C and Hyaluronic Acid</li>
+              <li>Obsessively tested and backed by data</li>
+              <li>Supports noticeably smoother and plumper skin, promotes stronger and fuller healthy hair, and supports joint health. </li>
+            </ul>
           </div>
           <div class="product-buy-description" id="description-2">This is the description for Point 2.</div>
           <div class="product-buy-description" id="description-3">This is the description for Point 3.</div>
@@ -620,10 +622,11 @@ Supports noticeably smoother and plumper skin, promotes stronger and fuller heal
         <use href="assets/sprite.svg#arrow-back"></use>
     </svg>
     </button>
-    <div class="science-indicators">
+    <div id="pagination-dots"></div>
+    <!-- <div class="science-indicators">
       <span class="science-indicator active"></span>
       <span class="science-indicator"></span>
-    </div>
+    </div> -->
     <button class="science-btn" id="science-nextBtn"> 
       <svg class="science-btn-img" >
         <use href="assets/sprite.svg#arrow-forward"></use>
@@ -805,6 +808,75 @@ Supports noticeably smoother and plumper skin, promotes stronger and fuller heal
   </div>
 </section>
 <script src="js/faq.js"></script>
+<!--Custumer rewiew--> 
+<section class="container">
+<div class="custumer-rewiew">
+  <div class="review-rating-container">
+    <div class="review-title-progress-container">
+      <h2 class="custumer-rewiew-main-title">Custumer rewiew</h2>
+      <div class="rating-summary-wrap">
+        <div class="rating-summary">
+          <div class="rating-score">4.8</div>
+          <div class="review-count-wrap">
+            <div class="rating-stars">★★★★★</div>
+            <div class="review-count">45,852 Verified 5-star reviews</div>
+          </div>
+        </div>
+        <div class="rating-breakdown">
+          <div class="rating-row">
+            <span>5</span>
+            <div class="progress-bar"><span style="width: 90%;"></span></div>
+          </div>
+          <div class="rating-row">
+            <span>4</span>
+            <div class="progress-bar"><span style="width: 70%;"></span></div>
+          </div>
+          <div class="rating-row">
+            <span>3</span>
+            <div class="progress-bar"><span style="width: 40%;"></span></div>
+          </div>
+          <div class="rating-row">
+            <span>2</span>
+            <div class="progress-bar"><span style="width: 10%;"></span></div>
+          </div>
+          <div class="rating-row">
+            <span>1</span>
+            <div class="progress-bar"><span style="width: 5%;"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="custumer-rewiew-sort-rating-controls">
+      <div class="custumer-rewiew-sort-rating-wrap">
+        <label class="custumer-rewiew-sort-rating-label">Sort by</label>
+        <div class="control">
+          <select>
+            <option>Featured</option>
+          </select>
+        </div>
+      </div>
+    <div class="custumer-rewiew-sort-rating-wrap">
+      <label class="custumer-rewiew-sort-rating-label">Rating</label>
+      <div class="control">
+        <select>
+          <option>All</option>
+        </select>
+      </div>
+    </div>
+ 
+    </div>
+  </div>
+  
+  <div class="custumer-rewiews-cards" id="custumer-rewiews-cards">
+  
+  </div>
+  <button class="custumer-rewiews-btn">More reviews</button>
+</div>
+
+
+</section>
+<script src="js/custumer-review.js"></script>
 <footer class="container footer">
   <div class="footer-wrap">
     <div class="footer-title-logo"><img src="assets/svg/logoPP.svg" alt="logo"></div>
@@ -827,7 +899,4 @@ Supports noticeably smoother and plumper skin, promotes stronger and fuller heal
 </body>
 <script src="js/script.js" defer></script>
 </html>
-
-
-
 

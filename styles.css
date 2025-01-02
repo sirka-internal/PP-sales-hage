@@ -1029,6 +1029,18 @@ letter-spacing: -0.01em;
   display: block;
 }
 
+.product-buy-description-title {
+  padding-top: 24px;
+}
+
+.product-buy-description-list {
+  margin-top: 1em;
+  margin-left: 16px;
+}
+
+.product-buy-description-list li {
+  list-style: disc;
+}
 .product-buy-results {
   margin-top: 64px;
   background-color: #EEE8E4;
@@ -1484,6 +1496,27 @@ margin-left: 12px;
         opacity: 24%;
       }
 
+
+      #pagination-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 16px;
+      }
+      
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #E40022; /* Колір неактивного індикатора */
+        transition: background-color 0.3s ease;
+        opacity: 20%;
+      }
+      
+      .dot.active {
+        opacity: 100%;
+      }
+
       .science-indicators {
         display: flex;
         justify-content: center;
@@ -1703,6 +1736,324 @@ color: #666666;
   height: 16px; /* Висота для пустого рядка */
 }
 
+/* Custumers */
+
+.custumer-rewiew {
+  background-color: #EEE8E4;
+  padding: 64px 16px 80px 16px;
+border-radius: 16px 16px 0px 0px;
+
+
+}
+
+.custumer-rewiew-main-title {
+font-family:'GT Pressura', sans-serif;
+font-size: 42px;
+font-weight: 400;
+line-height: 48px;
+letter-spacing: -0.02em;
+text-align: center;
+}
+
+.review-rating-container {
+
+ 
+}
+
+.rating-summary-wrap {
+  display: flex;
+  margin-top: 40px;
+}
+
+.rating-summary {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 109px;
+  margin-right: 40px;
+}
+
+.rating-score {
+font-family:'GT Pressura', sans-serif;
+font-size: 36px;
+font-weight: 400;
+line-height: 40px;
+letter-spacing: -0.02em;
+text-align: center;
+color: #0D0D0D;
+
+
+}
+
+.review-count-wrap {
+  text-align: center;
+}
+.rating-stars {
+  color: #ff0000;
+  font-size: 20px;
+  /* margin-top: 8px; */
+}
+
+.review-count {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #666666;
+  margin-top: 8px;
+}
+
+.rating-breakdown {
+  /* margin-top: 20px; */
+  flex: 1;
+}
+
+.rating-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.rating-row span {
+  font-size: 14px;
+  margin-right: 10px;
+  width: 10px;
+  text-align: right;
+}
+
+.progress-bar {
+  height: 8px;
+  flex-grow: 1;
+  background-color: rgba(255, 0, 0, 0.3);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  background-color: #ff0000;
+  border-radius: 4px;
+  position: absolute;
+}
+
+.custumer-rewiew-sort-rating-controls {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.custumer-rewiew-sort-rating-wrap {
+  flex: 1;
+}
+
+.custumer-rewiew-sort-rating-label {
+font-size: 14px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: -0.01em;
+text-align: left;
+color: #0D0D0D;
+opacity: 50%;
+}
+
+.control {
+  margin-top: 8px;
+  padding: 10px;
+  background-color: #F8F7F2;
+  color: #0D0D0D;
+  border: none;
+  border-radius: 6px;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.control select {
+  background: transparent;
+  border: none;
+  color: #0D0D0D;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+
+
+.custumer-rewiews-cards {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.custumer-rewiews-card {
+  display: block;
+  width: 343px;
+  min-width: 343px;
+  padding: 24px 16px;
+  border-radius: 8px;
+  background-color: #F8F7F2;
+ position: relative;
+}
+
+.custumer-rewiews-star span img {
+  width: 16px;
+  height: 16px;
+}
+.custumer-rewiews-reviewer {
+  display: flex;
+}
+
+.custumer-rewiews-image {
+ width: 60px;
+ height: 60px;
+}
+
+.custumer-rewiews-wrap {
+  margin-left: 16px;
+}
+.custumer-rewiews-name {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+
+.custumer-rewiews-verified {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+font-size: 14px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: -0.01em;
+text-align: left;
+color: #666666;
+}
+
+.custumer-rewiews-verified-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.custumer-rewiews-two-days {
+font-size: 12px;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: -0.01em;
+text-align: end;
+color: #666666;
+}
+
+.custumer-rewiews-heading-wrap {
+  margin-top: 24px;
+}
+
+.custumer-rewiews-heading {
+  font-family: 'GT Pressura', sans-serif;
+font-size: 24px;
+font-weight: 400;
+line-height: 32px;
+letter-spacing: -0.02em;
+text-align: left;
+
+}
+
+.custumer-rewiews-text {
+  margin-top: 8px;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: -0.01em;
+text-align: left;
+}
+
+/* .custumer-rewiews-general {
+  display: flex;
+  justify-content: space-between;
+} */
+
+
+.custumer-rewiews-star-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 33px;
+}
+
+.custumer-rewiews-recomend {
+  display: flex;
+  gap: 8px;
+}
+
+.custumer-rewiews-recomend p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #000000;  
+}
+
+
+.custumer-rewiews-helpfull-wrap {
+display: flex;
+margin-top: 10px;
+gap: 12px;
+}
+
+.custumer-rewiews-helpfull-wrap p{
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  color: #666666;
+}
+
+.custumer-rewiews-btn {
+  width: 212px;
+height: 56px;
+padding: 4px 40px 4px 40px;
+gap: 12px;
+border-radius: 12px;
+border: 1px solid #E40022;
+backdrop-filter: blur(80px);
+background: #F8F7F203;
+font-size: 18px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: -0.02em;
+text-align: center;
+color: #E40022;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-left: auto;
+margin-right: auto;
+margin-top: 24px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.custumer-rewiews-btn::after {
+  content: '';
+  background-color: #E40022;
+      display: inline-block; 
+      width: 8px; 
+      height: 8px;
+      border-radius: 50%; 
+      transition: opacity 0.3s ease;
+    }
 
 /* Footer */
 
@@ -1771,6 +2122,12 @@ color: #666666;
   .how-we-compare-subwrap{
     flex-direction:column;
   }
+
+  .custumer-rewiews-two-days {
+    position: absolute;
+    top: 24px;
+    right: 16px;
+    }
 }
 
 @media (min-width: 1440px) {
@@ -2486,4 +2843,312 @@ line-height: 18px;
   color: #F8F7F2;
 
 }
+
+/* Custumers */
+
+.custumer-rewiew {
+padding: 60px 155px;
+border-radius: 0px 0px 0px 0px;
+}
+
+.custumer-rewiew-main-title {
+font-size: 52px;
+line-height: 56px;
+text-align: center;
+}
+
+.review-rating-container {
+display: flex;
+ justify-content: space-between;
+}
+
+.review-title-progress-container{
+  width: 357px;
+   
+  }
+.rating-summary-wrap {
+  /* display: flex;
+  margin-top: 40px; */
+}
+
+.rating-summary {
+  /* display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 109px;
+  margin-right: 40px; */
+}
+
+.rating-score {
+/* font-family:'GT Pressura', sans-serif;
+font-size: 36px;
+font-weight: 400;
+line-height: 40px;
+letter-spacing: -0.02em;
+text-align: center;
+color: #0D0D0D; */
+
+
+}
+
+.review-count-wrap {
+  /* text-align: center; */
+}
+.rating-stars {
+  /* color: #ff0000;
+  font-size: 20px; */
+}
+
+.review-count {
+  /* font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #666666;
+  margin-top: 8px; */
+}
+
+.rating-breakdown {
+  /* flex: 1; */
+}
+
+.rating-row {
+  /* display: flex;
+  align-items: center;
+  margin-bottom: 8px; */
+}
+
+.rating-row span {
+  /* font-size: 14px;
+  margin-right: 10px;
+  width: 10px;
+  text-align: right; */
+}
+
+.progress-bar {
+  /* height: 8px;
+  flex-grow: 1;
+  background-color: rgba(255, 0, 0, 0.3);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden; */
+}
+
+.progress-bar span {
+  /* display: block;
+  height: 100%;
+  background-color: #ff0000;
+  border-radius: 4px;
+  position: absolute; */
+}
+
+.custumer-rewiew-sort-rating-controls {
+  width: 356px;
+
+    align-items: end;
+  /* display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  margin-top: 40px; */
+}
+
+.custumer-rewiew-sort-rating-wrap {
+  /* flex: 1; */
+}
+
+.custumer-rewiew-sort-rating-label {
+/* font-size: 14px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: -0.01em;
+text-align: left;
+color: #0D0D0D;
+opacity: 50%; */
+}
+
+.control {
+
+
+  /* margin-top: 8px;
+  padding: 10px;
+  background-color: #F8F7F2;
+  color: #0D0D0D;
+  border: none;
+  border-radius: 6px;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px; */
+}
+
+.control select {
+
+
+  /* background: transparent;
+  border: none;
+  color: #0D0D0D;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  text-align: left; */
+}
+
+.custumer-rewiews-cards {
+
+
+  /* display: flex;
+  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px; */
+}
+
+.custumer-rewiews-card {
+  width: 100%;
+  min-width: 100%;
+  display: flex;
+ gap: 120px;
+ 
+}
+
+.custumer-rewiews-reviewer {
+  /* display: flex; */
+}
+
+.custumer-rewiews-image {
+ /* width: 60px;
+ height: 60px; */
+}
+
+.custumer-rewiews-wrap {
+  /* margin-left: 16px; */
+}
+.custumer-rewiews-name {
+
+}
+
+.custumer-rewiews-verified {
+  /* display: flex;
+  gap: 8px;
+  margin-top: 4px;
+font-size: 14px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: -0.01em;
+text-align: left;
+color: #666666; */
+}
+
+.custumer-rewiews-verified p {
+white-space: nowrap
+}
+
+.custumer-rewiews-verified-icon {
+
+}
+
+.custumer-rewiews-two-days {
+  display: flex;
+    align-items: center;
+margin-left: 16px;
+}
+
+.custumer-rewiews-heading-wrap {
+  display: flex;
+  margin-top: 16px;
+}
+
+.custumer-rewiews-heading {
+font-size: 18px;
+line-height: 24px;
+}
+
+.custumer-rewiews-text {
+  /* margin-top: 8px;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: -0.01em;
+text-align: left; */
+}
+
+.custumer-rewiews-general {
+  /* display: flex;
+  justify-content: space-between; */
+}
+.custumer-rewiews-star-wrap {
+  /* display: flex;
+  justify-content: space-between; */
+  margin-top: 0px;
+}
+
+.custumer-rewiews-recomend {
+  /* display: flex;
+  gap: 8px; */
+}
+
+.custumer-rewiews-recomend p {
+  /* font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #000000;   */
+}
+
+
+.custumer-rewiews-helpfull-wrap {
+/* display: flex;
+margin-top: 10px;
+gap: 12px; */
+}
+
+.custumer-rewiews-helpfull-wrap p{
+  /* font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  color: #666666; */
+}
+
+.custumer-rewiews-btn {
+  /* width: 212px;
+height: 56px;
+padding: 4px 40px 4px 40px;
+gap: 12px;
+border-radius: 12px;
+border: 1px solid #E40022;
+backdrop-filter: blur(80px);
+background: #F8F7F203;
+font-size: 18px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: -0.02em;
+text-align: center;
+color: #E40022;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-left: auto;
+margin-right: auto;
+margin-top: 24px;
+cursor: pointer;
+transition: background-color 0.3s ease; */
+}
+
+.custumer-rewiews-btn::after {
+  /* content: '';
+  background-color: #E40022;
+      display: inline-block; 
+      width: 8px; 
+      height: 8px;
+      border-radius: 50%; 
+      transition: opacity 0.3s ease; */
+    }
+    
 }

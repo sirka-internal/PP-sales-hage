@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
       
       const maxIndex = Math.max(0, totalCards - visibleCardsCount - 1); // Максимальний індекс прокрутки
       const offset = currentIndex * cardWidth; // Зсув для прокрутки
-console.log("offset", offset)
-      console.log("maxIndex:", maxIndex, "currentIndex:", currentIndex);
+// console.log("offset", offset)
+    //   console.log("maxIndex:", maxIndex, "currentIndex:", currentIndex);
 
       // Прокрутка контейнера по X осі
       cardsContainer.style.transform = `translateX(-${offset}px)`;

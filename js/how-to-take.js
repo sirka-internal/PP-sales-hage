@@ -21,11 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
       const containerWidth = cardsWrap.offsetWidth; // Ширина видимого контейнера
-     console.log("containerWidth", containerWidth )
+    //  console.log("containerWidth", containerWidth )
      
       // const totalCards = cardsContainer.children.length; // Загальна кількість карток
       const visibleCardsCount = Math.floor(containerWidth / cardWidth); // Кількість карток, що поміщаються
-      console.log("visibleCardsCount", visibleCardsCount)
+    //   console.log("visibleCardsCount", visibleCardsCount)
       
       const maxIndex = Math.max(0, totalCards - visibleCardsCount - 1); // Максимальний індекс прокрутки
       const offset = currentIndex * cardWidth; // Зсув для прокрутки
@@ -49,11 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   nextBtn.addEventListener("click", () => {
-      const cardsWrapper = document.querySelector(".tribe-member");
+      const cardsWrapper = document.querySelector(".how-to-take-image-wrap");
       const containerWidth = cardsWrapper.offsetWidth; // Ширина видимого контейнера
       const totalCards = cardsContainer.children.length; // Загальна кількість карток
       const visibleCardsCount = Math.floor(containerWidth / cardWidth); // Кількість видимих карток
-      const maxIndex = Math.max(0, totalCards - visibleCardsCount); // Максимальний індекс прокрутки
+      const maxIndex = Math.max(0, totalCards - visibleCardsCount - 1); // Максимальний індекс прокрутки
 
       if (currentIndex < maxIndex) {
           currentIndex++;
