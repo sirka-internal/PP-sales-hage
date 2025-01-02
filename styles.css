@@ -2174,8 +2174,9 @@ height: 680px;
 
 .hero-can-box-img-wrap {
   position: absolute;
-  bottom: 0;
+  bottom: 40px;
   left: 565px;
+  /* background-color: transparent; */
 }
 
 .hero-can-box-img {
