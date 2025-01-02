@@ -2603,6 +2603,10 @@ padding-top: 58px;
   gap: 64px;
   }
   
+  .science-amanita-container {
+    margin-top: 0px;
+  }
+  
   .science-title-wrap {
     width: 510px;
     min-width: 510px;
