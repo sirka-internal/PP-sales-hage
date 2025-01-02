@@ -45,6 +45,18 @@ function formatDescription(description) {
   
         toggleSpan.addEventListener("click", () => {
             const isVisible = descriptionElement.style.display === "block";
+
+    // Закриваємо всі відкриті описи
+    document.querySelectorAll(".faq-description").forEach((desc) => {
+      desc.style.display = "none";
+    });
+    document.querySelectorAll(".faq-title").forEach((title) => {
+      title.style.color = "#0D0D0D";
+    });
+    document.querySelectorAll(".faq-toggle-button img").forEach((img) => {
+      img.src = "assets/svg/expand_more.svg";
+    });
+
             descriptionElement.style.display = isVisible ? "none" : "block";
             toggleButton.innerHTML = isVisible
               ? '<img src="assets/svg/expand_more.svg" alt="Expand">'
