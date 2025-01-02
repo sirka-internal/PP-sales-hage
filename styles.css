@@ -1044,6 +1044,7 @@ letter-spacing: -0.01em;
 }
 
 .product-buy-description {
+  padding-top: 24px;
   display: none;
   font-size: 16px;
   font-weight: 400;
@@ -1052,12 +1053,19 @@ letter-spacing: -0.01em;
   text-align: left;
 }
 
+
 .product-buy-description.active {
   display: block;
 }
 
+.list2.active {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
 .product-buy-description-title {
-  padding-top: 24px;
+  
 }
 
 .product-buy-description-list {
@@ -1067,6 +1075,10 @@ letter-spacing: -0.01em;
 
 .product-buy-description-list li {
   list-style: disc;
+}
+
+.strong {
+  font-weight: 700;
 }
 .product-buy-results {
   margin-top: 64px;
