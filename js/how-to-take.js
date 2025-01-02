@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let totalWidth = 0;
     const containerWidth = guaranteeString.offsetWidth;
   
-    while (totalWidth < containerWidth) {
+    while (totalWidth < containerWidth * 2) {
       const clone = item.cloneNode(true); 
       guaranteeString.appendChild(clone); 
       totalWidth += clone.offsetWidth + 32;

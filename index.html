@@ -298,20 +298,21 @@
         <div class="product-image">
             <img
               id="main-image"
-              src="assets/image/can_box.png"
+              src="assets/image/can_box_1-desktop.png"
               alt="Pure Amanita Muscaria Extract"
             />
         <div class="product-thumbnails">
-          <img src="assets/image/can_box.png" alt="Thumbnail 1" class="thumbnail active"/>
-          <img src="assets/image/can_box_2.png" alt="Thumbnail 2" class="thumbnail"/>
-          <img src="assets/image/can_box_3.png" alt="Thumbnail 3" class="thumbnail"/>
-          <img src="assets/image/can_box_4.png" alt="Thumbnail 4" class="thumbnail"/>
+          <img src="assets/image/can_box_1-desktop.png" alt="Thumbnail 1" class="thumbnail active"/>
+          <img src="assets/image/can_box_2-desktop.png" alt="Thumbnail 2" class="thumbnail"/>
+          <img src="assets/image/can_box_3-desktop.png" alt="Thumbnail 3" class="thumbnail"/>
+          <img src="assets/image/can_box_4-desktop.png" alt="Thumbnail 4" class="thumbnail"/>
         </div>
         <div class="product-scroll-mobile">
-          <img src="assets/image/can_box_1-mobile.png" alt="Thumbnail 1"/>
-          <img src="assets/image/can_box_2.png" alt="Thumbnail 2"/>
-          <img src="assets/image/can_box_3.png" alt="Thumbnail 3"/>
-          <img src="assets/image/can_box_4.png" alt="Thumbnail 4"/>
+          <div><img src="assets/image/can_box_1-mobile.png" alt="Thumbnail 1"/></div>
+          <div><img src="assets/image/can_box_2-desktop.png" alt="Thumbnail 2"/></div>
+          <div><img src="assets/image/can_box_3-desktop.png" alt="Thumbnail 3"/></div>
+          <div><img src="assets/image/can_box_4-desktop.png" alt="Thumbnail 4"/></div>
+          
         </div>
         <div class="product-indicators">
           <span class="indicator active"></span>
@@ -441,23 +442,13 @@
     </div>
     <div class="product-guarantee-string-info">
       <div class="product-guarantee-string-info-wrap"> <img src="assets/svg/garantee.svg" alt="garantee">
-        <p>100% money refound guarantee</p></div>
+        <p>100% money refound guarantee</p>
+      </div>
       
     </div>
   </section>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-    const guaranteeString = document.querySelector('.product-guarantee-string-info');
-    const item = guaranteeString.firstElementChild;
-    let totalWidth = 0;
-    const containerWidth = guaranteeString.offsetWidth;
-  
-    while (totalWidth < containerWidth) {
-      const clone = item.cloneNode(true); 
-      guaranteeString.appendChild(clone); 
-      totalWidth += clone.offsetWidth + 32;
-    }
-  });
+  <script src="js/product.js">
+
   </script>
   <!-- how-to-take -->
 <section class="container">
@@ -491,12 +482,12 @@
               media="(min-width: 1440px)"
                />
               <source 
-                  srcset="assets/image/how-to-take2-desktop.png"
+                  srcset="assets/image/how-to-take2-mobile.png"
                   media="(max-width: 1439px)" 
               />
                   <img 
                   class="how-to-take-image"
-                  src="assets/image/how-to-take2-desktop.png" 
+                  src="assets/image/how-to-take2-mobile.png" 
                   alt="how to take image"
                   />
           </picture>
@@ -510,12 +501,12 @@
               media="(min-width: 1440px)"
                />
               <source 
-                  srcset="assets/image/how-to-take3-desktop.png"
+                  srcset="assets/image/how-to-take3-mobile.png"
                   media="(max-width: 1439px)" 
               />
                   <img 
                   class="how-to-take-image"
-                  src="assets/image/how-to-take3-desktop.png" 
+                  src="assets/image/how-to-take3-mobile.png" 
                   alt="how to take image"
                   />
           </picture>
@@ -890,7 +881,17 @@
 
 <div class="footer-policy-wrap">
   <div class="footer-policy">
-    <p>Privacy policy</p> <p>Refund Policy</p> <p>Shipping Policy</p> <p>Terms of Use</p>
+    <p class="policy" data-policy="privacy">Privacy policy</p>
+    <p class="policy" data-policy="refund">Refund Policy</p> 
+    <p class="policy" data-policy="shipping">Shipping Policy</p> 
+    <p class="policy" data-policy="terms">Terms of Use</p>
+  </div>
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h2 id="modal-title"></h2>
+      <p id="modal-text"></p>
+      <button class="close-btn" id="close-btn">Close</button>
+    </div>
   </div>
   <p class="footer-present-perfect">© 2024 Present Perfect</p>
 </div>

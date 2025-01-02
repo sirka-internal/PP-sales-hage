@@ -38,11 +38,12 @@ function formatDescription(description) {
           </div>
         `;
   
+        const toggleSpan = faqList.querySelector(".faq-title-wrap");
         const toggleButton = faqList.querySelector(".faq-toggle-button");
         const titleElement = faqList.querySelector(".faq-title");
         const descriptionElement = faqList.querySelector(".faq-description");
   
-        toggleButton.addEventListener("click", () => {
+        toggleSpan.addEventListener("click", () => {
             const isVisible = descriptionElement.style.display === "block";
             descriptionElement.style.display = isVisible ? "none" : "block";
             toggleButton.innerHTML = isVisible

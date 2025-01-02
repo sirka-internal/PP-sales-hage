@@ -1,0 +1,19 @@
+{
+    "privacy": {
+      "title": "Privacy Policy",
+      "text": "This is the Privacy Policy content."
+    },
+    "refund": {
+      "title": "Refund Policy",
+      "text": "This is the Refund Policy content."
+    },
+    "shipping": {
+      "title": "Shipping Policy",
+      "text": "This is the Shipping Policy content."
+    },
+    "terms": {
+      "title": "Terms of Use",
+      "text": "This is the Terms of Use content."
+    }
+    
+  }

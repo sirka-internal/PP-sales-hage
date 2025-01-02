@@ -72,14 +72,18 @@ body {
   display: flex;
   justify-content: flex-start;
   width: 100%;
+  white-space: nowrap; /* Запобігає перенесенню тексту */
+ 
 }
+
 
 .header-item {
   display: flex;
   align-items: center;
   white-space: nowrap;
-  
+  animation: marquee 10s linear infinite; /* Анімація руху */
 }
+
 .header-item:first-child {
   margin-left: -62px;
 }
@@ -87,6 +91,8 @@ body {
 .header-item:not(:first-child) {
   margin-left: 16px;
 }
+
+
 
 .logo-icon {
   height: 16px;
@@ -740,10 +746,13 @@ text-align: center;
 }
 
 
-.product-scroll-mobile img {
+.product-scroll-mobile div {
   scroll-snap-align: center;
-  /* width: 343px;
-  min-width: 343px; */
+  width: 343px;
+  min-width: 343px;
+  height: 262px;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
 
@@ -751,13 +760,15 @@ text-align: center;
   text-align: center;
   position: relative;
   height: 100%;
+  
+  
 }
-
 .product-image img {
-  width: 343px;
-  min-width: 343px;
-  height: 262px;
-  border-radius: 16px;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .product-indicators {
@@ -885,6 +896,22 @@ margin-top: 8px;
   letter-spacing: -0.02em;
   text-align: left;
   color: #0D0D0D;
+  }
+
+  .pricing-option.active {
+    background-color: #E40022;
+  }
+
+  .pricing-option.active .pricing-title{
+    color: #F8F7F2;
+  }
+
+  .pricing-option.active .price-details {
+    color:  #F8F7F2;
+  }
+
+  .pricing-option.active .product-price {
+    color:  #F8F7F2;
   }
 
   .pricing-option:hover {
@@ -1148,16 +1175,20 @@ color: #0D0D0D;
   overflow: hidden;
   
 }
+
+
+
 .product-guarantee-string-info-wrap {
   display: flex;
   white-space: nowrap;
   align-items: center;
-  
+  animation: marquee 10s linear infinite; /* Анімація руху */
 }
 
-.product-guarantee-string-info-wrap:first-child {
+/* .product-guarantee-string-info-wrap:first-child {
   margin-left: -250px;
-}
+} */
+
 .guarantee img {
   width: 16px;
   height: 16px;
@@ -1319,7 +1350,7 @@ margin-top: 32px;
   display: flex;
   white-space: nowrap;
   align-items: center;
-  
+  animation: marquee 10s linear infinite; /* Анімація руху */
 }
 
 .how-to-take-experience-string-info-wrap:first-child {
@@ -1701,6 +1732,7 @@ text-align: center;
 
 .faq-title-wrap {
   display: flex;
+  cursor: pointer;
 }
 .faq-title {
   font-size: 18px;
@@ -1993,6 +2025,7 @@ text-align: left;
 .custumer-rewiews-recomend {
   display: flex;
   gap: 8px;
+  
 }
 
 .custumer-rewiews-recomend p {
@@ -2001,7 +2034,8 @@ text-align: left;
   line-height: 18px;
   letter-spacing: -0.01em;
   text-align: center;
-  color: #000000;  
+  color: #000000;
+  white-space: nowrap;  
 }
 
 
@@ -2019,6 +2053,21 @@ gap: 12px;
   text-align: left;
   color: #666666;
 }
+
+.custumer-rewiews-helpfull-wrap span {
+display: flex;
+}
+
+.custumer-rewiews-helpfull-wrap span p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #000000;
+  margin-left: 4px;
+}
+
 
 .custumer-rewiews-btn {
   width: 212px;
@@ -2075,16 +2124,17 @@ transition: background-color 0.3s ease;
 }
 
 .footer-policy {
+  margin-top: 40px;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  cursor: pointer;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
   letter-spacing: -0.01em;
   text-align: left;
   color: #F8F7F2;
-  margin-top: 40px;
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
 }
 
 .footer-present-perfect {
@@ -2096,6 +2146,46 @@ transition: background-color 0.3s ease;
   margin-top: 40px;
   color: #F8F7F2;
 
+}
+
+/* Modal */ 
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.close-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #E40022;
+  color: #F8F7F2;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: rgb(112, 5, 5);
 }
 
 @media (max-width: 1439px) {
@@ -2419,6 +2509,7 @@ line-height: 40px;
 /* Product */
 .product {
   padding: 120px 155px 60px 155px;
+  position: relative;
 }
 
 .product-scroll-mobile {
@@ -2432,6 +2523,11 @@ line-height: 40px;
   display: flex;
   gap: 64px;
  
+}
+
+.product-image {
+  position: sticky;
+  top: 16px;
 }
 
 .product-image img {
@@ -2606,7 +2702,7 @@ padding-top: 58px;
   .science-amanita-container {
     margin-top: 0px;
   }
-  
+
   .science-title-wrap {
     width: 510px;
     min-width: 510px;
@@ -2822,18 +2918,14 @@ line-height: 18px;
 }
 .footer-policy {
   margin-top: 0px;
-
-  
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: -0.01em;
-  text-align: left;
-  color: #F8F7F2;
-  ;
+ 
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
+}
+
+.footer-policy p {
+ 
 }
 
 .footer-present-perfect {
@@ -3153,4 +3245,13 @@ transition: background-color 0.3s ease; */
       transition: opacity 0.3s ease; */
     }
     
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }

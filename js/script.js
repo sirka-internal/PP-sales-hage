@@ -1,17 +1,36 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const marquee = document.querySelector('.header-wrap');
-    const item = marquee.firstElementChild;
+  const marquee = document.querySelector('.header-wrap');
+  const item = marquee.firstElementChild;
+
+  // Отримуємо ширину контейнера
+  const containerWidth = marquee.offsetWidth;
+
+  // Обчислюємо сумарну ширину всіх елементів
+  let totalWidth = marquee.scrollWidth;
+
+  // Дублюємо елементи, поки їхня сумарна ширина не заповнить весь контейнер + ще один цикл для плавності
+  while (totalWidth < containerWidth * 2) {
+    const clone = item.cloneNode(true);
+    marquee.appendChild(clone);
+    totalWidth += clone.offsetWidth + 32; // Враховуємо ширину елемента і відступ
+  }
+});
+
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     const marquee = document.querySelector('.header-wrap');
+//     const item = marquee.firstElementChild;
   
-    // Дублюємо елементи, поки не буде заповнено весь простір
-    let totalWidth = 0;
-    const containerWidth = marquee.offsetWidth;
+//     // Дублюємо елементи, поки не буде заповнено весь простір
+//     let totalWidth = 0;
+//     const containerWidth = marquee.offsetWidth;
   
-    while (totalWidth < containerWidth) {
-      const clone = item.cloneNode(true); // Клонуємо елемент
-      marquee.appendChild(clone); // Додаємо його до контейнера
-      totalWidth += clone.offsetWidth + 32; // Враховуємо ширину елемента і відступ
-    }
-  });
+//     while (totalWidth < containerWidth) {
+//       const clone = item.cloneNode(true); // Клонуємо елемент
+//       marquee.appendChild(clone); // Додаємо його до контейнера
+//       totalWidth += clone.offsetWidth + 32; // Враховуємо ширину елемента і відступ
+//     }
+//   });
 
   /// додавання зірочок в хедер та Real Results
   document.addEventListener("DOMContentLoaded", () => {
@@ -102,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Отримуємо всі зображення і кружечки
   const scrollContainer = document.querySelector('.product-scroll-mobile');
   const indicators = document.querySelectorAll('.indicator');
-  const images = document.querySelectorAll('.product-scroll-mobile img');
+  const images = document.querySelectorAll('.product-scroll-mobile div');
 
   // Додаємо обробник події для прокрутки
   scrollContainer.addEventListener('scroll', () => {
@@ -131,23 +150,56 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-//// product-buy-info
+
+
+
+////// Policy
+
 document.addEventListener('DOMContentLoaded', () => {
-  const items = document.querySelectorAll('.product-buy-list-item');
-  const descriptions = document.querySelectorAll('.product-buy-description');
+  const modal = document.getElementById('modal');
+  const modalTitle = document.getElementById('modal-title');
+  const modalText = document.getElementById('modal-text');
+  const closeBtn = document.getElementById('close-btn');
 
-  items.forEach((item, index) => {
-    item.addEventListener('click', () => {
-      // Зняти активний клас з усіх елементів
-      items.forEach(el => el.classList.remove('active'));
-        descriptions.forEach(desc => desc.classList.remove('active'));
+  let policies = {};
+  // Fetch policies from a JSON file
+  fetch("./js/policies-data.json")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  })
+    .then(data => {
+     console.log("data", data)
+      policies = data;
+      initPolicies();
+    })
+    .catch(error => console.error('Error loading policies:', error));
 
-      // Додати активний клас до вибраного елемента
-      item.classList.add('active');
-      descriptions[index].classList.add('active');
-    });
-  });
+  function initPolicies() {
+   document.querySelectorAll('.policy').forEach(policy => {
+   policy.addEventListener('click', () => {
+     const policyType = policy.getAttribute('data-policy');
+     const { title, text } = policies[policyType];
+
+     modalTitle.textContent = title;
+     modalText.textContent = text;
+     modal.style.display = 'flex';
+   });
+ });
+  }
+
+  closeBtn.addEventListener('click', () => {
+   modal.style.display = 'none';
+ });
+
+ // Close modal when clicking outside the content
+ modal.addEventListener('click', (e) => {
+   if (e.target === modal) {
+     modal.style.display = 'none';
+   }
+ });
+
 });
-
-
 
